@@ -1,6 +1,6 @@
 {
   "name": "@asyncapi/nodejs-ws-template",
-  "version": "0.8.2",
+  "version": "0.9.6",
   "description": "Node.js WebSockets template for AsyncAPI generator.",
   "keywords": [
     "asyncapi",
@@ -24,14 +24,15 @@
     "release": "semantic-release",
     "lint": "echo 'No linter configured yet'",
     "test": "echo 'No tests yet'",
-    "generate:assets": "echo 'No additional assets need to be generated at the moment'",
+    "generate:assets": "npm run generate:readme:toc",
+    "generate:readme:toc": "markdown-toc -i README.md",
     "bump:version": "npm --no-git-tag-version --allow-same-version version $VERSION"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@asyncapi/generator-filters": "^1.0.0",
+    "@asyncapi/generator-filters": "^2.0.0",
     "@asyncapi/generator-hooks": "^0.1.0"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "@semantic-release/npm": "^7.0.3",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "conventional-changelog-conventionalcommits": "^4.2.3",
+    "markdown-toc": "^1.2.0",
     "semantic-release": "^17.0.4"
   },
   "release": {
